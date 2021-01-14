@@ -1,10 +1,11 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var length = [ "setLength <8 || setLength > 128" ];
+var length = [ "setLength < 8 || setLength > 128" ];
 
 // set password possibilities
 var values= [ "abcdefghijklmnopqrstuvwxyz0123456789 ".split("") ]; 
-
+var uppercase= [ "ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
+var symbols = [ "!@#$%&*"];
 var password= "";
 
 // loop for varierty of password possibilites
@@ -13,9 +14,8 @@ for (var i=0; i <=generateBtn; i++)
 
 // promt password critria 
 
-// prompt for the length of password
-if (setLength <8 || setLength > 128) {
-}
+// prompt for size of length of password
+var length = window.prompt("What the length of your password?");
 
 // prompt for charactor types ie uppper case/ lowercases
 
