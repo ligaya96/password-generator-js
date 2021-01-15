@@ -1,1 +1,3 @@
 # password-generator-js
+
+On this week homework assignment we were asked to code a Password Generator. I was able to add prompts to ask what the length and if there is any specific characaters that the user would like to add to their password. With the length and special characaters chosen, clicking on the generate password button, a password with the length and characaters chosen will be given. When clicking on the generate password again, another password will generate, and the previous password will be added to the webpage.

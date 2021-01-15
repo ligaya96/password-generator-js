@@ -1,34 +1,44 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var length = [ "setLength < 8 || setLength > 128" ];
+var passwordText = document.querySelector("#password");
+// set password critia                                                     
+var lowercase= [ "abcdefghijklmnopqrstuvwxyz".split("") ]; 
+var numbers= ["0123456789".split("")];
+var specialcharaters= [ "!@#$%&*".split("")];
+var uppercase =[ "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("")];
+//Length of password
+var lengthMin= ["< 8"];
+var lengthMax= [ " > 128"];
+var password = ""
+ // prompt password critria 
+  var userSpecial = window.confirm ("do you want to use special characters?"); 
+  //if they choose yes or no
+  //if (!userSpecial) {
+    //return;
+  var userLower = window.confirm ("want to include lowercase?");
+  // add varaibles for numbers and uppercase
+  //if they choose yes or no 
 
-// set password possibilities
-var values= [ "abcdefghijklmnopqrstuvwxyz0123456789 ".split("") ]; 
-var uppercase= [ "ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-var symbols = [ "!@#$%&*"];
-var password= "";
-
-// loop for varierty of password possibilites
-for (var i=0; i <=generateBtn; i++)
-  password=password + values.concat(Math.floor(Math.random() * values.length))
-
-// promt password critria 
-
-// prompt for size of length of password
-var length = window.prompt("What the length of your password?");
-
-// prompt for charactor types ie uppper case/ lowercases
-
-
+ // prompt for size of length of password
+ var userLength = window.prompt("What the length of your password?");
+ //userLength = 
+// array that will have required critia 
+// concat arrays - previous array. 
+ // creating loop to generate password
+for(var i=0; i < 8 ; i++){
+  var randomIndex = Math.floor(Math.random() * lowercase.length)
+  password += specialcharaters[randomIndex]
+ console.log (password);
+}
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+  var generate = "generatePassword"
+  passwordText.textContent = password;
+  console.log(password)
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+ 
+  // Add event listener to generate button
+ generateBtn.addEventListener("click", writePassword);
 
+writePassword();
