@@ -13,8 +13,6 @@ var password = ""
  // prompt password critria 
   var userSpecial = window.confirm ("do you want to use special characters?"); 
   //if they choose yes or no
-  //if (!userSpecial) {
-    //return;
   var userLower = window.confirm ("want to include lowercase?");
   // add varaibles for numbers and uppercase
   //if they choose yes or no 
@@ -22,8 +20,7 @@ var password = ""
  // prompt for size of length of password
  var userLength = window.prompt("What the length of your password?");
  //userLength = 
-// array that will have required critia 
-// concat arrays - previous array. 
+// array that will have required critia
  // creating loop to generate password
 for(var i=0; i < 8 ; i++){
   var randomIndex = Math.floor(Math.random() * lowercase.length)
